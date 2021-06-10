@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5418a21a.chunk.css",
+    "main.js": "/static/js/main.91024ef3.chunk.js",
+    "main.js.map": "/static/js/main.91024ef3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bd55beb2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bd55beb2.js.map",
+    "static/js/2.ea8bcd33.chunk.js": "/static/js/2.ea8bcd33.chunk.js",
+    "static/js/2.ea8bcd33.chunk.js.map": "/static/js/2.ea8bcd33.chunk.js.map",
+    "static/js/3.315b79ad.chunk.js": "/static/js/3.315b79ad.chunk.js",
+    "static/js/3.315b79ad.chunk.js.map": "/static/js/3.315b79ad.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.5418a21a.chunk.css.map": "/static/css/main.5418a21a.chunk.css.map",
+    "static/js/2.ea8bcd33.chunk.js.LICENSE.txt": "/static/js/2.ea8bcd33.chunk.js.LICENSE.txt",
+    "static/media/sidebar.css": "/static/media/510Wxk93DuL._AC_SL1500_.73014479.jpg",
+    "static/media/index.css": "/static/media/background.da840729.svg",
+    "static/media/coollogo_com-21084510 1.a2575bb1.svg": "/static/media/coollogo_com-21084510 1.a2575bb1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd55beb2.js",
+    "static/js/2.ea8bcd33.chunk.js",
+    "static/css/main.5418a21a.chunk.css",
+    "static/js/main.91024ef3.chunk.js"
+  ]
+}
