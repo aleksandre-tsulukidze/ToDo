@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { NotesContext } from './notesContext.js';
 import Svg from './Svg';
 import Modal from './Modal';
@@ -6,11 +6,6 @@ import Modal from './Modal';
 const Note = ({ index, setRendering }) => {
   const [clicked, setClicked] = useState(false);
   const noteData = useContext(NotesContext);
-
-  useEffect(() => {
-    console.log(noteData);
-  }, [noteData]);
-
   const onClickedHandler = () => {
     setClicked(!clicked);
   };
