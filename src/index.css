@@ -1,10 +1,27 @@
 body {
   margin: 0;
+  max-height: 100vh;
+  background-image: url('./images/background.svg');
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Kristen ITC';
+  src: url('//db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.eot');
+  src: url('//db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/e781398492503195308dfad84be5a921.svg#Kristen ITC')
+      format('svg');
 }
 
 code {

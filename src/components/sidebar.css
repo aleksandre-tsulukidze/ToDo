@@ -1,0 +1,13 @@
+.sidebar {
+  position: fixed;
+  width: 120px;
+  height: 800px;
+  margin: 60px auto 60px 30px;
+  background-image: url('../images/510Wxk93DuL._AC_SL1500_.jpg');
+  box-shadow: 2px 5px 13px black;
+  border-radius: 7.5%;
+}
+
+.sidebar img {
+  border-radius: 7.5%;
+}
