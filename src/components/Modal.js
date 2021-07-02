@@ -3,7 +3,7 @@ import { NotesContext } from './notesContext.js';
 import axios from 'axios';
 import { firebaseDatabase } from '../firebase/index';
 
-import './modal.css';
+import '../css/modal.css';
 
 const Modal = ({ setClicked, index, setRendering }) => {
   const [response, setResponse] = useState({});

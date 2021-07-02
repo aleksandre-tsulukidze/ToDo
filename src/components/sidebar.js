@@ -1,5 +1,5 @@
 import React from 'react';
-import './sidebar.css';
+import '../css/sidebar.css';
 
 const TopNav = () => {
   return (

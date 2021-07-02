@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NotesContext } from './notesContext.js';
 import Logo from '../images/coollogo_com-21084510 1.svg';
 import Note from './Note.js';
 import Drag from './drag';
-import './main.css';
+import '../css/main.css';
 
 const Main = () => {
   const [color, setColor] = useState('#00C844');
@@ -12,7 +12,7 @@ const Main = () => {
 
   useEffect(() => {
     fetch(
-      'https://refrigerator-todo-default-rtdb.europe-west1.firebasedatabase.app/notes/.json',
+      'https://refrigerator-todo-default-rtdb.europe-west1.firebasedatabase.app/notes.json',
     )
       .then(res => res.json())
       .then(response => {

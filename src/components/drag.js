@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import axios from 'axios';
 import Draggable from 'react-draggable';
+import propTypes from 'prop-types';
 
-import './main.css';
+import '../css/main.css';
 
 const Drag = ({ color, setColor, setRendering }) => {
+  const nodeRef = useRef(null);
   const onDragStartHandler = e => {
     e.preventDefault();
   };
@@ -30,10 +32,12 @@ const Drag = ({ color, setColor, setRendering }) => {
   return (
     <div className="drag">
       <Draggable
+        nodeRef={nodeRef}
         position={{ x: 0, y: 0 }}
         onStart={e => onDragStartHandler(e)}
         onStop={e => onDragEndHandler(e)}>
         <span
+          ref={nodeRef}
           style={{
             backgroundColor: color,
             position: 'absolute',
@@ -66,6 +70,12 @@ const Drag = ({ color, setColor, setRendering }) => {
         value="#F50000"></button>
     </div>
   );
+};
+
+Drag.propTypes = {
+  color: propTypes.string,
+  setColor: propTypes.func,
+  setRendering: propTypes.func,
 };
 
 export default Drag;
