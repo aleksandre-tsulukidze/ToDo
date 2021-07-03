@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../images/PAC-GAY.png';
+import logo from '../images/PAC.png';
 import '../css/logo.css';
 
 const Logo = () => {
