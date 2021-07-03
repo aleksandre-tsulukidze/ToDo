@@ -1,5 +1,4 @@
 import React from 'react';
-import propTypes from 'prop-types';
 
 const Svg = ({ title, color }) => {
   return (
@@ -56,11 +55,6 @@ const Svg = ({ title, color }) => {
       </svg>
     </>
   );
-};
-
-Svg.propTypes = {
-  title: propTypes.string,
-  color: propTypes.string,
 };
 
 export default Svg;
