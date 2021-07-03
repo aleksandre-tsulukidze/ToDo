@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { NotesContext } from './notesContext.js';
+import propTypes from 'prop-types';
 import Svg from './Svg';
 import Modal from './Modal';
 
@@ -18,7 +19,8 @@ const Note = ({ index, setRendering }) => {
             'rotateZ(' + noteData[index].angle + 'deg) translate(-50%, -50%) ',
           position: 'absolute',
           top: noteData[index].Y,
-          left: noteData[index].X,
+          left: noteData[index].X + '%',
+          zIndex: '100',
         }}
         className="note"
         onClick={onClickedHandler}>
@@ -34,6 +36,11 @@ const Note = ({ index, setRendering }) => {
       ) : null}
     </div>
   );
+};
+
+Note.propTypes = {
+  index: propTypes.number,
+  setRendering: propTypes.func,
 };
 
 export default Note;
