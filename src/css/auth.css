@@ -1,0 +1,32 @@
+.wrapper {
+  position: fixed;
+  background-color: rgba(24, 24, 24, 0.8);
+  display: flex;
+  top: -69px;
+  left: -60px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.authForm {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #676767;
+  font-size: 2.4rem;
+  z-index: 200;
+  align-items: center;
+}
+
+.authForm input {
+  font-size: 2.4rem;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
+  color: white;
+}

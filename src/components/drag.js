@@ -2,10 +2,11 @@ import React, { useRef } from 'react';
 import axios from 'axios';
 import Draggable from 'react-draggable';
 import propTypes from 'prop-types';
-
+import { connect } from 'react-redux';
 import '../css/main.css';
 
-const Drag = ({ color, setColor, setRendering }) => {
+// eslint-disable-next-line no-unused-vars
+const Drag = ({ color, setColor, setRendering, uid }) => {
   const nodeRef = useRef(null);
   const onDragStartHandler = e => {
     e.preventDefault();
@@ -14,19 +15,20 @@ const Drag = ({ color, setColor, setRendering }) => {
   const onDragEndHandler = e => {
     axios
       .post(
-        'https://refrigerator-todo-default-rtdb.europe-west1.firebasedatabase.app/notes.json',
+        'https://refrigerator-todo-default-rtdb.europe-west1.firebasedatabase.app/notes/' +
+          uid +
+          '/.json',
         {
           title: '',
           dueDate: '',
           data: '',
           color: color,
           angle: (Math.random() * 30).toFixed(2),
-          X: e.clientX,
+          X: (e.clientX * 100) / window.innerWidth,
           Y: e.clientY,
         },
       )
       .then(() => setRendering(r => !r))
-      .then()
       .catch(err => console.log(err));
   };
   return (
@@ -74,8 +76,15 @@ const Drag = ({ color, setColor, setRendering }) => {
 
 Drag.propTypes = {
   color: propTypes.string,
+  uid: propTypes.string,
   setColor: propTypes.func,
   setRendering: propTypes.func,
 };
 
-export default Drag;
+const mapStateToProps = state => {
+  return {
+    uid: state.uid,
+  };
+};
+
+export default connect(mapStateToProps)(Drag);
